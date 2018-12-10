@@ -7,7 +7,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 10225757899,
+  "duration": 9577414565,
   "status": "passed"
 });
 formatter.scenario({
@@ -68,7 +68,7 @@ formatter.match({
   "location": "EmployeeStepDefination.navigate_to(String)"
 });
 formatter.result({
-  "duration": 7547619034,
+  "duration": 15759913453,
   "status": "passed"
 });
 formatter.match({
@@ -81,7 +81,7 @@ formatter.match({
   "location": "LoginFeatureStepDefination.enterUserId(String)"
 });
 formatter.result({
-  "duration": 767978227,
+  "duration": 595729747,
   "status": "passed"
 });
 formatter.match({
@@ -94,23 +94,32 @@ formatter.match({
   "location": "LoginFeatureStepDefination.enterpwd(String)"
 });
 formatter.result({
-  "duration": 302471800,
+  "duration": 676184540,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginFeatureStepDefination.clickLogin()"
 });
 formatter.result({
-  "duration": 468323510,
+  "duration": 325311592,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginFeatureStepDefination.clickOk()"
 });
 formatter.result({
-  "duration": 2568828665,
+  "duration": 2124255536,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginFeatureStepDefination.clicklogout()"
+});
+formatter.result({
+  "duration": 1269376389,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 1742124483,
+  "status": "passed"
+});
 });

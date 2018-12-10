@@ -21,7 +21,7 @@ public class TopNavImpl extends Env implements TopNav{
 	@FindBy(xpath="(//*[@class='pull-right'])[1]")
 	public WebElement profile;
 	
-	@FindBy(xpath="//*[@class='waves-effect waves-block']")
+	@FindBy(xpath="//*[text()='Sign Out']")
 	public WebElement logout;
 	
 	@FindBy(xpath="//*[@src='images/hff_logo.png']")
