@@ -12,13 +12,19 @@ import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import env.Env;
 import managers.FileReaderManager;
+import managers.TestContext;
 
 import org.apache.log4j.Logger;
 
-public class Hooks extends Env
+public class Hooks
 {
 	
-
+	TestContext testContext;
+	 
+	 public Hooks(TestContext context) {
+	 testContext = context;
+	 }
+	 
 	Logger log = Logger.getLogger(Hooks.class);
 	Scenario scenario = null;
 	
@@ -26,7 +32,7 @@ public class Hooks extends Env
 	public void before(Scenario scenario) {
 		this.scenario = scenario;
 		
-		Env.CreateWebDriver(getBrowserName());
+		Env.CreateWebDriver(Env.getBrowserName());
 	}
 	
 	@After
@@ -38,8 +44,8 @@ public class Hooks extends Env
         if(scenario.isFailed()) {
 	        try {
 	        	scenario.write("The scenario failed.");
-	        	scenario.write("Current Page URL is " + getDriver().getCurrentUrl());
-	            byte[] screenshot = ((TakesScreenshot)getDriver()).getScreenshotAs(OutputType.BYTES);
+	        	scenario.write("Current Page URL is " + Env.getDriver().getCurrentUrl());
+	            byte[] screenshot = ((TakesScreenshot)Env.getDriver()).getScreenshotAs(OutputType.BYTES);
 	            scenario.embed(screenshot, "resources/screenshot");
 	        } catch (WebDriverException somePlatformsDontSupportScreenshots) {
 	            System.err.println(somePlatformsDontSupportScreenshots.getMessage());
@@ -49,7 +55,7 @@ public class Hooks extends Env
 		log.info("***********************************************************************************************************");
 		log.info("[ Driver Status ] - Clean and close the intance of the driver");
 		log.info("***********************************************************************************************************");
-        getDriver().quit();
+		Env.getDriver().quit();
         
     }
 }
