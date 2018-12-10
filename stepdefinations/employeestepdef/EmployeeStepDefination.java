@@ -1,5 +1,7 @@
 package employeestepdef;
 
+import org.openqa.selenium.By;
+
 import com.erp.AssociateCenter.pages.EmployeePage;
 import com.erp.AssociateCenter.pagesImpl.EmployeePageImpl;
 import com.erp.main.pages.LoginPage;
@@ -37,6 +39,7 @@ public class EmployeeStepDefination extends Env
 	{
 		
 		m.clickAssociateCenter();
+		
 	}
 	
 	@Then("^click on master data$")
@@ -49,6 +52,7 @@ public class EmployeeStepDefination extends Env
 	public void login_with_valid_credentials() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		loginPageImpl.login();
+
 	}
 
 	@Then("^click on employee$")

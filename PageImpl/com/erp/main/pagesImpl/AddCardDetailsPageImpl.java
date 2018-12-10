@@ -33,7 +33,7 @@ public class AddCardDetailsPageImpl extends Env implements AddCardDetailsPage
 	public AddCardDetailsPageImpl(WebDriver x)
 	{
 		x=Env.getDriver();
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(x, this);
 	}
 	
 	public void enterCardNumber(String x)

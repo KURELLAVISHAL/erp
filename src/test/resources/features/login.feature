@@ -1,6 +1,6 @@
 Feature: login and logout
 
-  @tc-1   @Regression
+  @tc-1   @CI
   Scenario: Open login page and do logout
     Given navigate to "http://test.hff.erp.ukkoteknik.com/hff/#/common/login"
     Then enter userid with "accounts"
@@ -9,7 +9,7 @@ Feature: login and logout
     Then click on profile
     Then click on logout
 
-  @tc-2   @Regression
+  @tc-2   @CI
   Scenario Outline: validate login fields
     Given navigate to "http://test.hff.erp.ukkoteknik.com/hff/#/common/login"
     Then enter userid with "<x>"

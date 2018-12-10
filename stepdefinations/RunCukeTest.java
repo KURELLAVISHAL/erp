@@ -8,8 +8,8 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		plugin = {"pretty", "html:target/cucumber-reports"},
-		features = {"E:\\eclipse\\erp\\src\\test\\resources\\features\\login.feature"},
-		tags= {"@tc-1"}
+		features = {"E:\\eclipse\\erp\\src\\test\\resources\\features\\login.feature","E:\\eclipse\\erp\\src\\test\\resources\\features\\Employee.feature"},
+		tags= {"@CI"}
 )
 public class RunCukeTest {
 	

@@ -41,7 +41,7 @@ public class AddUserDetailsPageImpl extends Env implements AddUserDetailsPage
 	{
 		
 		x=Env.getDriver();
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(x, this);
 	}
 	
 	public void enterName(String x)

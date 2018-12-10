@@ -38,7 +38,7 @@ public class LoginPageImpl extends Env implements LoginPage
 	public LoginPageImpl(WebDriver x)
 	{
 		x=Env.getDriver();
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(x, this);
 	}
 	
 	@Override

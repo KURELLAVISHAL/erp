@@ -19,7 +19,6 @@ public class Hooks extends Env
 {
 	
 
-	//public static WebDriver driver;
 	Logger log = Logger.getLogger(Hooks.class);
 	Scenario scenario = null;
 	
@@ -28,8 +27,6 @@ public class Hooks extends Env
 		this.scenario = scenario;
 		
 		Env.CreateWebDriver(getBrowserName());
-//		System.setProperty("webdriver.chrome.driver", FileReaderManager.getInstance().getConfigReader().getDriverPath());
-//		driver = new ChromeDriver();
 	}
 	
 	@After

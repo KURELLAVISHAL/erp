@@ -3,6 +3,7 @@ package env;
 import methods.AssertionMethods;
 import methods.ClickElementsMethods;
 import methods.ConfigurationMethods;
+import methods.ExplicitWaitMethods;
 import methods.InputMethods;
 import methods.JavascriptHandlingMethods;
 import methods.MiscMethods;
@@ -28,4 +29,5 @@ public interface BaseTest
 	ProgressMethods progressObj = new ProgressMethods();
 	JavascriptHandlingMethods javascriptObj = new JavascriptHandlingMethods();
 	ScreenShotMethods screenshotObj = new ScreenShotMethods();
+	ExplicitWaitMethods explicitObj=new ExplicitWaitMethods();
 }

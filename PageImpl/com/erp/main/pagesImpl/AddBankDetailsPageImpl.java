@@ -31,7 +31,7 @@ public class AddBankDetailsPageImpl extends Env implements AddBankDetailsPage{
 	public AddBankDetailsPageImpl(WebDriver x)
 	{
 		x=Env.getDriver();
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(x, this);
 	}
 	
 	public void selectBankAccountType(String text)

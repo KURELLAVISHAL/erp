@@ -15,7 +15,6 @@ import methods.ExplicitWaitMethods;
 public class TopNavImpl extends Env implements TopNav{
 
 	PageObjectManager pageObjectManager;
-	//private LoginPageImpl lp=new LoginPageImpl(getDriver());
 	LoginPageImpl loginPageImpl;
 	
 	@FindBy(xpath="(//*[@class='pull-right'])[1]")
@@ -30,7 +29,7 @@ public class TopNavImpl extends Env implements TopNav{
 	public TopNavImpl(WebDriver x)
 	{
 		x=Env.getDriver();
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(x, this);
 	}
 	
 	@Override
@@ -38,9 +37,7 @@ public class TopNavImpl extends Env implements TopNav{
 		// TODO Auto-generated method stub
 		pageObjectManager = new PageObjectManager(getDriver());
 		loginPageImpl=pageObjectManager.getLoginPageImpl();
-		//ExplicitWaitMethods.waitForVisibility(logout);
 		clickObj.click(logout);
-		//ExplicitWaitMethods.waitForVisibility(lp.loginBtn);
 		if(loginPageImpl.loginBtn.isDisplayed())
 		{
 			System.out.println("logout sucessfully");

@@ -58,42 +58,42 @@ public class DashboardPageImpl extends Env implements DashboardPage
 	public DashboardPageImpl(WebDriver x)
 	{
 		x=Env.getDriver();
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(x, this);
 	}
 	
 	public void clickAssociateCenter()
 	{
-		ExplicitWaitMethods.waitForVisibility(associateCener);
+		explicitObj.waitForVisibility(associateCener);
 		clickObj.click(associateCener);
 	}
 	
 	public void clickVendorCenter()
 	{
-		ExplicitWaitMethods.waitForVisibility(vendorCenter);
+		explicitObj.waitForVisibility(vendorCenter);
 		clickObj.click(vendorCenter);
 	}
 	
 	public void clickDonorCustomerCenter()
 	{
-		ExplicitWaitMethods.waitForVisibility(donorCustomerCenter);
+		explicitObj.waitForVisibility(donorCustomerCenter);
 		clickObj.click(donorCustomerCenter);
 	}
 	
 	public void clickBankCenter()
 	{
-		ExplicitWaitMethods.waitForVisibility(bankCenter);
+		explicitObj.waitForVisibility(bankCenter);
 		clickObj.click(bankCenter);
 	}
 	
 	public void clickOrganizationCenter()
 	{
-		ExplicitWaitMethods.waitForVisibility(organizationCenter);
+		explicitObj.waitForVisibility(organizationCenter);
 		clickObj.click(organizationCenter);
 	}
 	
 	public void clickReportsCenter()
 	{
-		ExplicitWaitMethods.waitForVisibility(reportsCenter);
+		explicitObj.waitForVisibility(reportsCenter);
 		clickObj.click(reportsCenter);
 	}
 

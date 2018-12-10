@@ -122,7 +122,7 @@ public static WebDriver driver;
 		waitForAlert.until(ExpectedConditions.alertIsPresent());
 	}
 	
-	public static void waitForVisibility(WebElement element) 
+	public  void waitForVisibility(WebElement element) 
 	{
 	       
 	       wait.until(ExpectedConditions.visibilityOf(element));

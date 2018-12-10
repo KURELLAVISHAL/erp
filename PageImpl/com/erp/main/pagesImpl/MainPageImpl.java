@@ -31,10 +31,13 @@ public class MainPageImpl extends Env implements MainPage
 	@FindBy(xpath="//tbody")
 	public List<WebElement> tbody;
 	
+	@FindBy(xpath="//*[@class='fa fa-eye fa-rotate-45']")
+	public List<WebElement> eye;
+	
 	public MainPageImpl(WebDriver x)
 	{
 		x=Env.getDriver();
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(x, this);
 		
 	}
 	
@@ -69,8 +72,10 @@ public class MainPageImpl extends Env implements MainPage
 	public void clickView(int z)
 	{
 		
-		List<WebElement> eye=driver.findElements(By.xpath("//*[@class='fa fa-eye fa-rotate-45']"));
+		//List<WebElement> eye=driver.findElements(By.xpath("//*[@class='fa fa-eye fa-rotate-45']"));
+		wait.until(ExpectedConditions.visibilityOfAllElements(eye));
 		eye.get(z).click();
+		
 	}
 
 	@Override

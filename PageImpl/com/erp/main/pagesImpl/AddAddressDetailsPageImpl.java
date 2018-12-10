@@ -35,7 +35,7 @@ public class AddAddressDetailsPageImpl extends Env implements AddAddressDetailsP
 	{
 		
 		x=Env.getDriver();
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(x, this);
 	}
 	
 	public void enterPincode(String x) 

@@ -10,7 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.erp.AssociateCenter.pages.EmployeePage;
 import com.erp.main.pages.AddAddressDetailsPage;
@@ -28,6 +28,7 @@ import com.erp.main.pagesImpl.TopNavImpl;
 import env.Env;
 import managers.PageObjectManager;
 import managers.TestContext;
+import methods.ExplicitWaitMethods;
 
 
 public class EmployeePageImpl extends Env implements EmployeePage
@@ -53,7 +54,7 @@ public class EmployeePageImpl extends Env implements EmployeePage
 	{
 	
 		x=Env.getDriver();
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(x, this);
 		
 		
 	}
@@ -133,6 +134,7 @@ public class EmployeePageImpl extends Env implements EmployeePage
 	public void clickView() {
 		// TODO Auto-generated method stub
 		mainPageImpl.clickView(0);
+		explicitObj.waitForVisibility(viewEmployee);
 		if(viewEmployee.isDisplayed())
 		{
 			System.out.println("test passed");

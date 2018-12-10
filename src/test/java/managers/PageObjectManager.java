@@ -34,7 +34,7 @@ public class PageObjectManager extends Env
 	public PageObjectManager(WebDriver x)
 	{
 		x=Env.getDriver();
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(x, this);
 	}
 	
 	public TopNavImpl getTopNavImpl()

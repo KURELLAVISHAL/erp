@@ -22,7 +22,7 @@ Feature: To check employee page
     And enter the data in search and check whether the data is reflecting or not
 
   @tc-6   @CI
-  Scenario: check search functionlality
+  Scenario: check view functionlality
    Given navigate to "http://test.hff.erp.ukkoteknik.com/hff/#/common/login"
     Then login with valid credentials
     Then click on employee

@@ -147,40 +147,40 @@ public class AssociateCenterModule extends Env implements BaseTest
 	public AssociateCenterModule(WebDriver x)
 	{
 		x=Env.getDriver();
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(x, this);
 	}
 	
 	public void clickAssociateCenter()
 	{
-		ExplicitWaitMethods.waitForVisibility(associateCenter);
+		explicitObj.waitForVisibility(associateCenter);
 		clickObj.click(associateCenter);
 	}
 	
 	public void clickMasterData()
 	{
 		
-		ExplicitWaitMethods.waitForVisibility(masterData);
+		explicitObj.waitForVisibility(masterData);
 		clickObj.click(masterData);
 	}
 	
 	public void clickMasterDataEmployee()
 	{
 		clickMasterData();
-		ExplicitWaitMethods.waitForVisibility(masterDataEmployee);
+		explicitObj.waitForVisibility(masterDataEmployee);
 		clickObj.click(masterDataEmployee);
 	}
 	
 	public void clickMasterDataConsultant()
 	{
 		clickMasterData();
-		ExplicitWaitMethods.waitForVisibility(masterDataConsultant);
+		explicitObj.waitForVisibility(masterDataConsultant);
 		clickObj.click(masterDataConsultant);
 	}
 	
 	public void clickMasterDataContractStaff()
 	{
 		clickMasterData();
-		ExplicitWaitMethods.waitForVisibility(masterDataContractStaff);
+		explicitObj.waitForVisibility(masterDataContractStaff);
 		clickObj.click(masterDataContractStaff);
 		
 	}
@@ -188,7 +188,7 @@ public class AssociateCenterModule extends Env implements BaseTest
 	public  void clickMasterDataCHFsCHEsBCPs()
 	{
 		clickMasterData();
-		ExplicitWaitMethods.waitForVisibility(masterDataCHFsCHEsBCPs);
+		explicitObj.waitForVisibility(masterDataCHFsCHEsBCPs);
 		clickObj.click(masterDataCHFsCHEsBCPs);
 		
 	}
@@ -196,28 +196,28 @@ public class AssociateCenterModule extends Env implements BaseTest
 	public void clickMasterDataProgramAssociate()
 	{
 		clickMasterData();
-		ExplicitWaitMethods.waitForVisibility(masterDataProgramAssociate);
+		explicitObj.waitForVisibility(masterDataProgramAssociate);
 		clickObj.click(masterDataProgramAssociate);
 	}
 	
 	public void clickMasterDataVolunteers()
 	{
 		clickMasterData();
-		ExplicitWaitMethods.waitForVisibility(masterDataVolunteers);
+		explicitObj.waitForVisibility(masterDataVolunteers);
 		clickObj.click(masterDataVolunteers);
 	}
 	
 	public void clickMasterDataStudent()
 	{
 		clickMasterData();
-		ExplicitWaitMethods.waitForVisibility(masterDataStudent);
+		explicitObj.waitForVisibility(masterDataStudent);
 		clickObj.click(masterDataStudent);
 	}
 	
 	public void clickMasterDataCHFMapping()
 	{
 		clickMasterData();
-		ExplicitWaitMethods.waitForVisibility(masterDataCHFMapping);
+		explicitObj.waitForVisibility(masterDataCHFMapping);
 		clickObj.click(masterDataCHFMapping);
 	}
 	
