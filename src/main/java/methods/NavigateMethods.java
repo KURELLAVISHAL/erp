@@ -10,6 +10,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import env.BaseTest;
+import env.Env;
 
 public class NavigateMethods extends SelectElementByType implements BaseTest
 {
@@ -23,7 +24,7 @@ public class NavigateMethods extends SelectElementByType implements BaseTest
 	 */
 	public void navigateTo(String url) 
 	{
-		driver.get(url);
+		Env.getDriver().get(url);
 	}
 	
 	/** Method to navigate back & forward
@@ -32,15 +33,15 @@ public class NavigateMethods extends SelectElementByType implements BaseTest
 	public void navigate(String direction)
 	{
 		if (direction.equals("back"))
-			driver.navigate().back();
+			Env.getDriver().navigate().back();
 		else
-			driver.navigate().forward();
+			Env.getDriver().navigate().forward();
 	}
 	
 	/** Method to quite webdriver instance */
 	public void closeDriver()
 	{
-		driver.quit();
+		Env.getDriver().quit();
 	}
 	
 	/** Method to return key by OS wise
@@ -72,7 +73,7 @@ public class NavigateMethods extends SelectElementByType implements BaseTest
 	 */
 	public void zoomInOut(String inOut)
 	{
-		WebElement Sel= driver.findElement(getelementbytype("tagName","html"));
+		WebElement Sel= Env.getDriver().findElement(getelementbytype("tagName","html"));
 		if(inOut.equals("ADD"))
 			Sel.sendKeys(Keys.chord(Keys.CONTROL, Keys.ADD));
 		else if(inOut.equals("SUBTRACT"))
@@ -88,7 +89,7 @@ public class NavigateMethods extends SelectElementByType implements BaseTest
 	 */
 	public void zoomInOutTillElementDisplay(WebElement element,String inOut)
 	{
-		Actions action = new Actions(driver);
+		Actions action = new Actions(Env.getDriver());
 		//element = wait.until(ExpectedConditions.presenceOfElementLocated(getelementbytype(accessType, accessName)));
 		while(true)
 		{
@@ -105,13 +106,13 @@ public class NavigateMethods extends SelectElementByType implements BaseTest
 	 */
 	public void resizeBrowser(int width, int height)
 	{
-		driver.manage().window().setSize(new Dimension(width,height));
+		Env.getDriver().manage().window().setSize(new Dimension(width,height));
 	}
 	
 	/** Method to maximize browser	 */
 	public void maximizeBrowser()
 	{
-		driver.manage().window().maximize();
+		Env.getDriver().manage().window().maximize();
 	}
 	
 	/** Method to hover on element
@@ -120,7 +121,7 @@ public class NavigateMethods extends SelectElementByType implements BaseTest
 	 */
 	public void hoverOverElement(WebElement element)
 	{
-		Actions action = new Actions(driver);
+		Actions action = new Actions(Env.getDriver());
 		//element = wait.until(ExpectedConditions.presenceOfElementLocated(getelementbytype(accessType, accessName)));
 		
 		action.moveToElement(element).perform();
@@ -134,7 +135,7 @@ public class NavigateMethods extends SelectElementByType implements BaseTest
 	{
 		//element = wait.until(ExpectedConditions.presenceOfElementLocated(getelementbytype(accessType, accessName)));
 		
-		JavascriptExecutor executor = (JavascriptExecutor)driver;
+		JavascriptExecutor executor = (JavascriptExecutor)Env.getDriver();
 		executor.executeScript("arguments[0].scrollIntoView();", element);
 		
 	}
@@ -145,7 +146,7 @@ public class NavigateMethods extends SelectElementByType implements BaseTest
 	 */
 	public void scrollPage(String to) throws Exception
 	{
-		JavascriptExecutor executor = (JavascriptExecutor)driver;
+		JavascriptExecutor executor = (JavascriptExecutor)Env.getDriver();
 		if (to.equals("end"))
 			executor.executeScript("window.scrollTo(0,Math.max(document.documentElement.scrollHeight,document.body.scrollHeight,document.documentElement.clientHeight));");
 		else if (to.equals("top"))
@@ -157,17 +158,17 @@ public class NavigateMethods extends SelectElementByType implements BaseTest
 	/**Method to switch to new window */
     public void switchToNewWindow()
     {
-    	old_win = driver.getWindowHandle();
+    	old_win = Env.getDriver().getWindowHandle();
     	
-    	for(String winHandle : driver.getWindowHandles())
+    	for(String winHandle : Env.getDriver().getWindowHandles())
     		lastWinHandle = winHandle;
-    	driver.switchTo().window(lastWinHandle);
+    	Env.getDriver().switchTo().window(lastWinHandle);
     }
     
     /** Method to switch to old window */
     public void switchToOldWindow()
     {
-    	driver.switchTo().window(old_win);
+    	Env.getDriver().switchTo().window(old_win);
     	//System.out.println("++"+driver.switchTo().window(old_win).getTitle());
     }
     
@@ -177,11 +178,11 @@ public class NavigateMethods extends SelectElementByType implements BaseTest
     public void switchToWindowByTitle(String windowTitle) throws Exception
     {
     	System.out.println("++"+windowTitle+"++");
-    	old_win = driver.getWindowHandle();
+    	old_win = Env.getDriver().getWindowHandle();
     	boolean winFound = false;
-    	for(String winHandle : driver.getWindowHandles())
+    	for(String winHandle : Env.getDriver().getWindowHandles())
     	{
-    		String str = driver.switchTo().window(winHandle).getTitle();
+    		String str = Env.getDriver().switchTo().window(winHandle).getTitle();
     		System.out.println("**"+str+"**");
     		if (str.equals(windowTitle))
     		{
@@ -196,7 +197,7 @@ public class NavigateMethods extends SelectElementByType implements BaseTest
     /**Method to close new window*/
     public void closeNewWindow()
     {
-    	driver.close();
+    	Env.getDriver().close();
     	//System.out.println("Closed driver");
     }
     
@@ -205,7 +206,7 @@ public class NavigateMethods extends SelectElementByType implements BaseTest
      * */
     public void switchFrameByIndex(int index)
     {
-    	driver.switchTo().frame(index);
+    	Env.getDriver().switchTo().frame(index);
     }
       
     /** Method to switch frame using frame name or id
@@ -213,7 +214,7 @@ public class NavigateMethods extends SelectElementByType implements BaseTest
      * */
     public void switchFrameByNameorId(String nameorid)
     {
-    	driver.switchTo().frame(nameorid);
+    	Env.getDriver().switchTo().frame(nameorid);
     }
     
     /** Method to switch frame using web element frame
@@ -223,7 +224,7 @@ public class NavigateMethods extends SelectElementByType implements BaseTest
     public void switchFrameByWebElement(WebElement element)
     {
     	//element = wait.until(ExpectedConditions.presenceOfElementLocated(getelementbytype(accessType, accessName)));
-    	driver.switchTo().frame(element);
+    	Env.getDriver().switchTo().frame(element);
     }
     
    
@@ -231,12 +232,12 @@ public class NavigateMethods extends SelectElementByType implements BaseTest
     /** method to switch to default content*/
     public void switchToDefaultContent()
     {
-    	driver.switchTo().defaultContent();
+    	Env.getDriver().switchTo().defaultContent();
     }
     
     
     public void switchToActiveElement()
     {
-    	driver.switchTo().activeElement();
+    	Env.getDriver().switchTo().activeElement();
     }
 }

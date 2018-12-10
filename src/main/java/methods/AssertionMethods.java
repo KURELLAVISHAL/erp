@@ -5,6 +5,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
 import env.BaseTest;
+import env.Env;
 
 public class AssertionMethods extends SelectElementByType implements BaseTest
 {
@@ -18,7 +19,7 @@ public class AssertionMethods extends SelectElementByType implements BaseTest
 	 * */
 	public String getPageTitle()
 	{
-		return driver.getTitle();
+		return Env.getDriver().getTitle();
 	}
 	
 	/** Method to verify page title

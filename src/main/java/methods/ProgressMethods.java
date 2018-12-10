@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import env.BaseTest;
+import env.Env;
 
 public class ProgressMethods extends SelectElementByType implements BaseTest
 {
@@ -24,7 +25,7 @@ public class ProgressMethods extends SelectElementByType implements BaseTest
 		if (method.equals("sleep"))
 			Thread.sleep(Integer.parseInt(time)*1000);
 		else if (method.equals("implicit"))
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			Env.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	
 	/**Method to Explicitly wait for element to be displayed
@@ -38,7 +39,7 @@ public class ProgressMethods extends SelectElementByType implements BaseTest
 		/*System.out.println("dura : "+duration);
 		int dur = ;
 		System.out.println("dura : "+dur);*/
-		WebDriverWait wait = (new WebDriverWait(driver,Integer.parseInt(duration)*1000));
+		WebDriverWait wait = (new WebDriverWait(Env.getDriver(),Integer.parseInt(duration)*1000));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(byEle));
 	}
 		

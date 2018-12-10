@@ -37,7 +37,7 @@ public class TopNavImpl extends Env implements TopNav{
 		// TODO Auto-generated method stub
 		pageObjectManager = new PageObjectManager(getDriver());
 		loginPageImpl=pageObjectManager.getLoginPageImpl();
-		clickObj.click(logout);
+		clickObj.clickForcefully(logout);
 		if(loginPageImpl.loginBtn.isDisplayed())
 		{
 			System.out.println("logout sucessfully");

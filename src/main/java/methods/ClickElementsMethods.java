@@ -7,6 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import env.BaseTest;
+import env.Env;
 
 public class ClickElementsMethods extends SelectElementByType implements BaseTest
 {
@@ -22,13 +23,7 @@ public class ClickElementsMethods extends SelectElementByType implements BaseTes
 		//element = wait.until(ExpectedConditions.presenceOfElementLocated(getelementbytype(accessType, accessName)));		
 		element.click();
 	}
-	
-	public void click1(By x)
-	{
-//		element = wait.until(ExpectedConditions.presenceOfElementLocated(x));
-//		element.click();
-		driver.findElement(x).click();
-	}
+
 	
 	/** Method to forcefully click on an element
 	@param accessType : String : Locator type (id, name, class, xpath, css)
@@ -37,7 +32,7 @@ public class ClickElementsMethods extends SelectElementByType implements BaseTes
 	public void clickForcefully(WebElement element)
 	{
 		//element = wait.until(ExpectedConditions.presenceOfElementLocated(getelementbytype(accessType, accessName)));
-		JavascriptExecutor executor = (JavascriptExecutor)driver;
+		JavascriptExecutor executor = (JavascriptExecutor)Env.getDriver();
 		executor.executeScript("arguments[0].click();",element);
 	}
 	
@@ -49,7 +44,7 @@ public class ClickElementsMethods extends SelectElementByType implements BaseTes
 	{
 		//element = wait.until(ExpectedConditions.presenceOfElementLocated(getelementbytype(accessType, accessValue)));
 
-		Actions action = new Actions(driver);
+		Actions action = new Actions(Env.getDriver());
 		action.moveToElement(element).doubleClick().perform();
 	}
 }

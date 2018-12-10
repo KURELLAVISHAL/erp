@@ -1,6 +1,7 @@
 package methods;
 
 import env.BaseTest;
+import env.Env;
 
 public class JavascriptHandlingMethods implements BaseTest 
 {
@@ -10,8 +11,8 @@ public class JavascriptHandlingMethods implements BaseTest
 	public void handleAlert(String decision)
 	{
 		if(decision.equals("accept"))
-			driver.switchTo().alert().accept();
+			Env.getDriver().switchTo().alert().accept();
 		else
-			driver.switchTo().alert().dismiss();
+			Env.getDriver().switchTo().alert().dismiss();
 	}
 }
