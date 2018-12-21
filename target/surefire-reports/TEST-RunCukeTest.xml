@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="58" failures="0" name="RunCukeTest" time="18.892" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_191\jre\bin"/>
+    <property name="java.vm.version" value="25.191-b12"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="E:\eclipse\erp"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="test" value="RunCukeTest.java"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="E:\eclipse\erp"/>
+    <property name="java.runtime.version" value="1.8.0_191-b12"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_191\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\Lenovo\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="E:\eclipse\apache-maven-3.6.0\bin\..\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_191\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\composer;E:\xampp\php\;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk1.8.0_191\bin;C:\WINDOWS\System32\OpenSSH\;E:\eclipse\apache-maven-3.6.0\bin;C:\Users\Lenovo\AppData\Local\Microsoft\WindowsApps;C:\Users\Lenovo\AppData\Roaming\Composer\vendor\bin;E:\xampp\php;C:\Users\Lenovo\AppData\Roaming\npm;C:\Program Files\nodejs;;."/>
+    <property name="maven.conf" value="E:\eclipse\apache-maven-3.6.0\bin\../conf"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="library.jansi.path" value="E:\eclipse\apache-maven-3.6.0\bin\..\lib\jansi-native"/>
+    <property name="user.home" value="C:\Users\Lenovo"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="Lenovo"/>
+    <property name="java.class.path" value="E:\eclipse\apache-maven-3.6.0\bin\..\boot\plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_191\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test -Dtest=RunCukeTest.java"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_191"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_191\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_191\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_191\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_191\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_191\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_191\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_191\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_191\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_191\jre\classes"/>
+    <property name="sun.stderr.encoding" value="cp437"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="E:\eclipse\apache-maven-3.6.0\bin\.."/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.stdout.encoding" value="cp437"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="Scenario: check employeelist employee" name="Given navigate to &quot;http://test.hff.erp.ukkoteknik.com/hff/#/common/login&quot;" time="0.012"/>
+  <testcase classname="Scenario: check employeelist employee" name="Then login with valid credentials" time="0.001"/>
+  <testcase classname="Scenario: check employeelist employee" name="Then click on employee" time="0"/>
+  <testcase classname="Scenario: check employeelist employee" name="And check employee name is employee list" time="0"/>
+  <testcase classname="Scenario: check employeelist employee" name="Scenario: check employeelist employee" time="2.839"/>
+  <testcase classname="Scenario: check search functionlality" name="Given navigate to &quot;http://test.hff.erp.ukkoteknik.com/hff/#/common/login&quot;" time="0"/>
+  <testcase classname="Scenario: check search functionlality" name="Then login with valid credentials" time="0"/>
+  <testcase classname="Scenario: check search functionlality" name="Then click on employee" time="0"/>
+  <testcase classname="Scenario: check search functionlality" name="And enter the data in search and check whether the data is reflecting or not" time="0"/>
+  <testcase classname="Scenario: check search functionlality" name="Scenario: check search functionlality" time="2.209"/>
+  <testcase classname="Scenario: check view functionlality" name="Given navigate to &quot;http://test.hff.erp.ukkoteknik.com/hff/#/common/login&quot;" time="0"/>
+  <testcase classname="Scenario: check view functionlality" name="Then login with valid credentials" time="0"/>
+  <testcase classname="Scenario: check view functionlality" name="Then click on employee" time="0"/>
+  <testcase classname="Scenario: check view functionlality" name="And click view then check the details" time="0"/>
+  <testcase classname="Scenario: check view functionlality" name="Scenario: check view functionlality" time="1.927"/>
+  <testcase classname="Scenario: Open login page and do logout" name="Given navigate to &quot;http://test.hff.erp.ukkoteknik.com/hff/#/common/login&quot;" time="0"/>
+  <testcase classname="Scenario: Open login page and do logout" name="Then enter userid with &quot;accounts&quot;" time="0"/>
+  <testcase classname="Scenario: Open login page and do logout" name="Then enter password with &quot;8f5@INV&quot;" time="0"/>
+  <testcase classname="Scenario: Open login page and do logout" name="And click on login button" time="0"/>
+  <testcase classname="Scenario: Open login page and do logout" name="Then click on profile" time="0.001"/>
+  <testcase classname="Scenario: Open login page and do logout" name="Then click on logout" time="0"/>
+  <testcase classname="Scenario: Open login page and do logout" name="Scenario: Open login page and do logout" time="1.618"/>
+  <testcase classname="|  |  | blank |" name="Given navigate to &quot;http://test.hff.erp.ukkoteknik.com/hff/#/common/login&quot;" time="0"/>
+  <testcase classname="|  |  | blank |" name="Then enter userid with &quot;&quot;" time="0"/>
+  <testcase classname="|  |  | blank |" name="Then enter password with &quot;&quot;" time="0"/>
+  <testcase classname="|  |  | blank |" name="And click on login button" time="0.001"/>
+  <testcase classname="|  |  | blank |" name="Then validate userid and password fields with &quot;blank&quot;" time="0"/>
+  <testcase classname="|  |  | blank |" name="|  |  | blank |" time="1.719"/>
+  <testcase classname="| accounts |  | blankpwd |" name="Given navigate to &quot;http://test.hff.erp.ukkoteknik.com/hff/#/common/login&quot;" time="0"/>
+  <testcase classname="| accounts |  | blankpwd |" name="Then enter userid with &quot;accounts&quot;" time="0"/>
+  <testcase classname="| accounts |  | blankpwd |" name="Then enter password with &quot;&quot;" time="0.001"/>
+  <testcase classname="| accounts |  | blankpwd |" name="And click on login button" time="0"/>
+  <testcase classname="| accounts |  | blankpwd |" name="Then validate userid and password fields with &quot;blankpwd&quot;" time="0"/>
+  <testcase classname="| accounts |  | blankpwd |" name="| accounts |  | blankpwd |" time="1.675"/>
+  <testcase classname="|  | 8f5@INV | blankuserid |" name="Given navigate to &quot;http://test.hff.erp.ukkoteknik.com/hff/#/common/login&quot;" time="0"/>
+  <testcase classname="|  | 8f5@INV | blankuserid |" name="Then enter userid with &quot;&quot;" time="0"/>
+  <testcase classname="|  | 8f5@INV | blankuserid |" name="Then enter password with &quot;8f5@INV&quot;" time="0"/>
+  <testcase classname="|  | 8f5@INV | blankuserid |" name="And click on login button" time="0"/>
+  <testcase classname="|  | 8f5@INV | blankuserid |" name="Then validate userid and password fields with &quot;blankuserid&quot;" time="0.001"/>
+  <testcase classname="|  | 8f5@INV | blankuserid |" name="|  | 8f5@INV | blankuserid |" time="1.751"/>
+  <testcase classname="| accounts | 8f5@INW | invalidpwd |" name="Given navigate to &quot;http://test.hff.erp.ukkoteknik.com/hff/#/common/login&quot;" time="0"/>
+  <testcase classname="| accounts | 8f5@INW | invalidpwd |" name="Then enter userid with &quot;accounts&quot;" time="0.001"/>
+  <testcase classname="| accounts | 8f5@INW | invalidpwd |" name="Then enter password with &quot;8f5@INW&quot;" time="0"/>
+  <testcase classname="| accounts | 8f5@INW | invalidpwd |" name="And click on login button" time="0"/>
+  <testcase classname="| accounts | 8f5@INW | invalidpwd |" name="Then validate userid and password fields with &quot;invalidpwd&quot;" time="0"/>
+  <testcase classname="| accounts | 8f5@INW | invalidpwd |" name="| accounts | 8f5@INW | invalidpwd |" time="1.687"/>
+  <testcase classname="| account | 8f5@INV | invaliduserid |" name="Given navigate to &quot;http://test.hff.erp.ukkoteknik.com/hff/#/common/login&quot;" time="0"/>
+  <testcase classname="| account | 8f5@INV | invaliduserid |" name="Then enter userid with &quot;account&quot;" time="0"/>
+  <testcase classname="| account | 8f5@INV | invaliduserid |" name="Then enter password with &quot;8f5@INV&quot;" time="0"/>
+  <testcase classname="| account | 8f5@INV | invaliduserid |" name="And click on login button" time="0"/>
+  <testcase classname="| account | 8f5@INV | invaliduserid |" name="Then validate userid and password fields with &quot;invaliduserid&quot;" time="0"/>
+  <testcase classname="| account | 8f5@INV | invaliduserid |" name="| account | 8f5@INV | invaliduserid |" time="1.799"/>
+  <testcase classname="| accounts | 8f5@INV | valid |" name="Given navigate to &quot;http://test.hff.erp.ukkoteknik.com/hff/#/common/login&quot;" time="0"/>
+  <testcase classname="| accounts | 8f5@INV | valid |" name="Then enter userid with &quot;accounts&quot;" time="0"/>
+  <testcase classname="| accounts | 8f5@INV | valid |" name="Then enter password with &quot;8f5@INV&quot;" time="0"/>
+  <testcase classname="| accounts | 8f5@INV | valid |" name="And click on login button" time="0"/>
+  <testcase classname="| accounts | 8f5@INV | valid |" name="Then validate userid and password fields with &quot;valid&quot;" time="0.001"/>
+  <testcase classname="| accounts | 8f5@INV | valid |" name="| accounts | 8f5@INV | valid |" time="1.649"/>
+</testsuite>
